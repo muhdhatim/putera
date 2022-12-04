@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Putera</title>
+  <link rel="icon" href="images/Logo_Royal_Military_College.png">
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="images/Logo_Royal_Military_College.png" alt="RMC LOGO" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="dashboard.html" class="nav-link">Laman Utama</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="images/Logo_Royal_Military_College.png" alt="RMC Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">SPP</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Admin (Akademik)</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="/dashboard.html" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Laman Utama
+                <!-- <i class="right fas fa-angle-left"></i> -->
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>
+                Log Keluar
+                <!-- <i class="right fas fa-angle-left"></i> -->
+              </p>
+            </a>
+          </li>
+    
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Profil Putera</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Profil Putera</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+
+            <!-- Profile Image -->
+            <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  <img class="profile-user-img img-fluid img-circle" src="../../dist/img/avatar5.png" alt="User profile picture">
+                </div>
+
+                <h3 class="profile-username text-center">Muhd Abu</h3>
+
+                <p class="text-muted text-center">Putera</p>
+
+                <ul class="list-group list-group-unbordered mb-3">
+                  <li class="list-group-item">
+                    <b>Kelas</b> <a class="float-right">4 THETA</a>
+                  </li>
+                  <li class="list-group-item">
+                    <b>Kompeni</b> <a class="float-right">A</a>
+                  </li>
+                  <li class="list-group-item">
+                    <b>Nombor Tentera</b> <a class="float-right">432176</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+            <!-- About Me Box -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Tentang Putera</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <strong><i class="fas fa-book mr-1"></i> Pendidikan</strong>
+
+                <p class="text-muted">
+                  SK Lundang (2013-2018)
+                </p>
+                <p class="text-muted">
+                  SIC (2018-2020)
+                </p>
+
+                <hr>
+
+                <strong><i class="fas fa-map-marker-alt mr-1"></i> Lokasi</strong>
+
+                <p class="text-muted">Batu Pahat, Johor</p>
+
+                <hr>
+
+                <strong><i class="fas fa-pencil-alt mr-1"></i> Hobi</strong>
+
+                <p class="text-muted">
+                    <ul>
+                        <li>Bola Sepak</li>
+                        <li>Futsal</li>
+                        <li>Chess</li>
+                    </ul>
+                </p>
+
+                <hr>
+
+                <strong><i class="far fa-file-alt mr-1"></i> Catatan</strong>
+
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-header p-2">
+                <ul class="nav nav-pills">
+                  <li class="nav-item"><a class="nav-link active" href="#butiran" data-toggle="tab">Butiran Peribadi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#akademik" data-toggle="tab">Akademik</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ketenteraan" data-toggle="tab">Ketenteraan</a></li>
+                </ul>
+              </div><!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="active tab-pane" id="butiran">
+
+                        <!-- Butiran -->                        
+                        <div id="accordion">
+                            <div class="card card-warning">
+                              <div class="card-header">
+                                <h4 class="card-title w-100">
+                                  <a class="d-block w-100" data-toggle="collapse" href="#collapseOne">
+                                    Putera
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                <div class="card-body">
+                                    <form class="form-horizontal">
+                                        <div class="form-group row">
+                                          <label for="inputName" class="col-sm-2 col-form-label">Nama</label>
+                                          <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputName" placeholder="Name" value="Muhd Abu Bin Ahmad" readonly>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label for="inputEmail" class="col-sm-2 col-form-label">No KPT</label>
+                                          <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="432176" readonly>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label for="inputEmail" class="col-sm-2 col-form-label">Berat</label>
+                                          <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="71KG" readonly>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label for="inputEmail" class="col-sm-2 col-form-label">Tinggi</label>
+                                          <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="161CM" readonly>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label for="inputEmail" class="col-sm-2 col-form-label">BMI</label>
+                                          <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="26.5" readonly>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label for="inputExperience" class="col-sm-2 col-form-label">Alamat</label>
+                                          <div class="col-sm-10">
+                                            <textarea class="form-control" id="inputExperience" placeholder="Experience" readonly>No 1, Jalan Sentosa, Kampung Aman, 66964 Batu Pahat, Johor</textarea>
+                                          </div>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card card-cyan">
+                              <div class="card-header">
+                                <h4 class="card-title w-100">
+                                  <a class="d-block w-100" data-toggle="collapse" href="#collapseTwo">
+                                    Ibu Bapa
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <form class="form-horizontal">
+                                        <h4>Bapa</h4>
+                                        <div class="form-group row">
+                                          <label for="inputName" class="col-sm-2 col-form-label">Nama Bapa</label>
+                                          <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputName" placeholder="Name" value="Ahmad Bin Dollah" readonly>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label for="inputEmail" class="col-sm-2 col-form-label">No KP</label>
+                                          <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="650511082581" readonly>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label for="inputExperience" class="col-sm-2 col-form-label">Alamat</label>
+                                          <div class="col-sm-10">
+                                            <textarea class="form-control" id="inputExperience" placeholder="Experience" readonly>No 1, Jalan Sentosa, Kampung Aman, 66964 Batu Pahat, Johor</textarea>
+                                          </div>
+                                        </div>
+                                       <div class="form-group row">
+                                          <label for="inputEmail" class="col-sm-2 col-form-label">Pekerjaan</label>
+                                          <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="Doktor" readonly>
+                                          </div>
+                                        </div>
+                                        <hr>
+
+                                        <h4>Ibu</h4>
+                                        <div class="form-group row">
+                                          <label for="inputName" class="col-sm-2 col-form-label">Nama Ibu</label>
+                                          <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputName" placeholder="Name" value="Jamilah Binti Ahmadh" readonly>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label for="inputEmail" class="col-sm-2 col-form-label">No KP</label>
+                                          <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="671121145066" readonly>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label for="inputExperience" class="col-sm-2 col-form-label">Alamat</label>
+                                          <div class="col-sm-10">
+                                            <textarea class="form-control" id="inputExperience" placeholder="Experience" readonly>No 1, Jalan Sentosa, Kampung Aman, 66964 Batu Pahat, Johor</textarea>
+                                          </div>
+                                        </div>
+                                       <div class="form-group row">
+                                          <label for="inputEmail" class="col-sm-2 col-form-label">Pekerjaan</label>
+                                          <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="Doktor" readonly>
+                                          </div>
+                                        </div>
+                                        <hr>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card card-secondary">
+                              <div class="card-header">
+                                <h4 class="card-title w-100">
+                                  <a class="d-block w-100" data-toggle="collapse" href="#collapseThree">
+                                    Pencapaian Terdahulu
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <strong><i class="fas fa-book mr-1"></i> Keputusan Peperiksaan Tingkatan 3: 7A 1B</strong>
+
+                                    <p class="text-muted mb-0">
+                                        Bahasa Melayu   : A
+                                    </p>
+                                    <p class="text-muted mb-0">
+                                        Bahasa Inggeris  : A
+                                    </p>
+                                    <p class="text-muted mb-0">
+                                        Matematik        : A
+                                    </p>
+                                    <p class="text-muted mb-0">
+                                        Sains   : A
+                                    </p>
+                                    <p class="text-muted mb-0">
+                                        Pendidikan Islam   : A
+                                    </p>
+                                    <p class="text-muted mb-0">
+                                        Geografi   : A
+                                    </p>
+                                    <p class="text-muted mb-0">
+                                        Bahasa Arab   : A
+                                    </p>
+
+                                    <hr>
+
+                                    <strong><i class="fas fa-book mr-1"></i> Pertandingan Sukan:</strong>
+
+                                    <p class="text-muted mb-0">
+                                        Bola Sepak Peringkat Negeri
+                                    </p>
+                                    
+                                    <hr>
+
+                                    <strong><i class="fas fa-book mr-1"></i> Pasukan Beruniform:</strong>
+
+                                    <p class="text-muted mb-0">
+                                        Pengakap Peringkat Sekolah
+                                    </p>
+
+
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- Butiran -->
+
+                  </div>
+                  <!-- /.tab-pane -->
+                  <div class="tab-pane" id="akademik">
+                    
+                        <!-- Akademik -->
+                        <div id="accordion2">
+                            <div class="card card-warning">
+                              <div class="card-header">
+                                <h4 class="card-title w-100">
+                                  <a class="d-block w-100" data-toggle="collapse" href="#collapseOne">
+                                    Keputusan Peperiksaan 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseOne" class="collapse show" data-parent="#accordion2">
+                                <div class="card-body">
+                                    <strong><i class="fas fa-book mr-1"></i> Peperiksaan Awal Tahun: 8A 1B</strong>
+<pre>
+Bahasa Melayu   : A    Matematik Tambahan : A      Fizik    :A
+Bahasa Inggeris : A    Pendidikan Islam   : A      Biologi  :A
+Matematik       : A    Sejarah            : B      Kimia    :A
+</pre>
+
+                                    <hr>
+                                    <strong><i class="fas fa-book mr-1"></i> Peperiksaan  Pertengahan Tahun: 9A</strong>
+<pre>
+Bahasa Melayu   : A    Matematik Tambahan : A      Fizik    :A
+Bahasa Inggeris : A    Pendidikan Islam   : A      Biologi  :A
+Matematik       : A    Sejarah            : B      Kimia    :A</pre>
+
+                                    <hr>
+                                    <strong><i class="fas fa-book mr-1"></i> Peperiksaan  Akhir Tahun: 9A</strong>
+<pre>
+Bahasa Melayu   : A    Matematik Tambahan : A      Fizik    :A
+Bahasa Inggeris : A    Pendidikan Islam   : A      Biologi  :A
+Matematik       : A    Sejarah            : B      Kimia    :A
+</pre>
+
+                                    <hr>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card card-cyan">
+                              <div class="card-header">
+                                <h4 class="card-title w-100">
+                                  <a class="d-block w-100" data-toggle="collapse" href="#collapseTwo">
+                                    Kokurikulum
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseTwo" class="collapse" data-parent="#accordion2">
+                                <div class="card-body">
+
+                                    <strong><i class="fas fa-book mr-1"></i> Keputusan Kokurikulum:</strong>
+
+                                    <p class="text-muted mb-0">
+                                        Kelab Bahasa Inggeris 
+                                    </p>
+                                    
+                                    <hr>
+
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- Akademik -->
+
+                  </div>
+                  <!-- /.tab-pane -->
+
+                  <div class="tab-pane" id="ketenteraan">
+                        <!-- Ketenteraan -->
+                        <div id="accordion3">
+                            <div class="card card-warning">
+                              <div class="card-header">
+                                <h4 class="card-title w-100">
+                                  <a class="d-block w-100" data-toggle="collapse" href="#collapseOne">
+                                    Peperiksaan Ketenteraan 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseOne" class="collapse show" data-parent="#accordion3">
+                                <div class="card-body">
+                                    <strong><i class="fas fa-book mr-1"></i> Ujian Ketenteraan:</strong>
+                                        <pre>
+1. Kawad kaki
+2. Jalan Laju
+3. Menembak
+4. Membaca Peta
+                                        </pre>
+
+                                    <hr>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card card-cyan">
+                              <div class="card-header">
+                                <h4 class="card-title w-100">
+                                  <a class="d-block w-100" data-toggle="collapse" href="#collapseThree">
+                                    Masalah Displin
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseThree" class="collapse" data-parent="#accordion3">
+                                <div class="card-body">
+
+                                    <strong><i class="fas fa-book mr-1"></i> Masalah Displin:</strong>
+
+                                    <p class="text-muted mb-0">
+                                        Merokok 
+                                    </p>
+                                    <p class="text-muted mb-0">
+                                        Vape 
+                                    </p>
+                                    
+                                    <hr>
+
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- Ketenteraan -->
+                  </div>
+                  <!-- /.tab-pane -->
+                </div>
+                <!-- /.tab-content -->
+              </div><!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2022-2023 <a href="#">IMC</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+</body>
+</html>
