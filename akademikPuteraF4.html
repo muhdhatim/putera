@@ -214,192 +214,96 @@
               <div class="card-header p-2">
                 <a class="btn btn-sm btn-success mb-1" href="#">Tambah Peperiksaan &nbsp;<i class="fas fa-plus-circle"></i></a>
                 <ul class="nav nav-pills">
-                  <li class="nav-item"><a class="nav-link active" href="#butiran" data-toggle="tab">PEPERIKSAAN PENGGAL SATU</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="#peperiksaan1" data-toggle="tab">PEPERIKSAAN PENGGAL SATU</a></li>
                   <li class="nav-item"><a class="nav-link" href="#akademik" data-toggle="tab">PEPERIKSAAN PERTENGAHAN TAHUN</a></li>
                   <li class="nav-item"><a class="nav-link" href="#ketenteraan" data-toggle="tab">PEPERIKSAAN AKHIR TAHUN</a></li>
                 </ul>
               </div><!-- /.card-header -->
               <div class="card-body">
                 <div class="tab-content">
-                  <div class="active tab-pane" id="butiran">
+                  <div class="active tab-pane" id="peperiksaan1">
 
-                        <!-- Butiran -->                        
-                        <div id="accordion">
-                            <div class="card card-warning">
-                              <div class="card-header">
-                                <h4 class="card-title w-100">
-                                  <a class="d-block w-100" data-toggle="collapse" href="#collapseOne">
-                                    Putera
-                                  </a>
-                                </h4>
-                              </div>
-                              <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                                <div class="card-body">
-                                    <form class="form-horizontal">
-                                        <div class="form-group row">
-                                          <label for="inputName" class="col-sm-2 col-form-label">Nama</label>
-                                          <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputName" placeholder="Name" value="Muhd Abu Bin Ahmad" readonly>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label for="inputEmail" class="col-sm-2 col-form-label">No KPT</label>
-                                          <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="432176" readonly>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label for="inputEmail" class="col-sm-2 col-form-label">Berat</label>
-                                          <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="71KG" readonly>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label for="inputEmail" class="col-sm-2 col-form-label">Tinggi</label>
-                                          <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="161CM" readonly>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label for="inputEmail" class="col-sm-2 col-form-label">BMI</label>
-                                          <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="26.5" readonly>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label for="inputExperience" class="col-sm-2 col-form-label">Alamat</label>
-                                          <div class="col-sm-10">
-                                            <textarea class="form-control" id="inputExperience" placeholder="Experience" readonly>No 1, Jalan Sentosa, Kampung Aman, 66964 Batu Pahat, Johor</textarea>
-                                          </div>
-                                        </div>
-                                    </form>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card card-cyan">
-                              <div class="card-header">
-                                <h4 class="card-title w-100">
-                                  <a class="d-block w-100" data-toggle="collapse" href="#collapseTwo">
-                                    Ibu Bapa
-                                  </a>
-                                </h4>
-                              </div>
-                              <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    <form class="form-horizontal">
-                                        <h4>Bapa</h4>
-                                        <div class="form-group row">
-                                          <label for="inputName" class="col-sm-2 col-form-label">Nama Bapa</label>
-                                          <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputName" placeholder="Name" value="Ahmad Bin Dollah" readonly>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label for="inputEmail" class="col-sm-2 col-form-label">No KP</label>
-                                          <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="650511082581" readonly>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label for="inputExperience" class="col-sm-2 col-form-label">Alamat</label>
-                                          <div class="col-sm-10">
-                                            <textarea class="form-control" id="inputExperience" placeholder="Experience" readonly>No 1, Jalan Sentosa, Kampung Aman, 66964 Batu Pahat, Johor</textarea>
-                                          </div>
-                                        </div>
-                                       <div class="form-group row">
-                                          <label for="inputEmail" class="col-sm-2 col-form-label">Pekerjaan</label>
-                                          <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="Doktor" readonly>
-                                          </div>
-                                        </div>
-                                        <hr>
+                        <!-- Peperiksaan 1 -->
+                        <table class="table table-bordered table-sm">
+                            <thead>
+                              <tr>
+                                <th style="text-align: center;" colspan="37">MAKTAB TENTERA DIRAJA</th>
+                              </tr>
+                              <tr>
+                                <th style="text-align: center;" colspan="37">KEPUTUSAN PEPERIKSAAN PENGGAL SATU TINGKATAN 4 TAHUN 2022</th>
+                              </tr>
+                              <tr>
+                                <th rowspan="2">Bil. </th>
+                                <th rowspan="2">Nama</th>
+                                <th rowspan="2">Kelas</th>
+                                <th rowspan="2">Kompeni</th>
 
-                                        <h4>Ibu</h4>
-                                        <div class="form-group row">
-                                          <label for="inputName" class="col-sm-2 col-form-label">Nama Ibu</label>
-                                          <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputName" placeholder="Name" value="Jamilah Binti Ahmadh" readonly>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label for="inputEmail" class="col-sm-2 col-form-label">No KP</label>
-                                          <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="671121145066" readonly>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label for="inputExperience" class="col-sm-2 col-form-label">Alamat</label>
-                                          <div class="col-sm-10">
-                                            <textarea class="form-control" id="inputExperience" placeholder="Experience" readonly>No 1, Jalan Sentosa, Kampung Aman, 66964 Batu Pahat, Johor</textarea>
-                                          </div>
-                                        </div>
-                                       <div class="form-group row">
-                                          <label for="inputEmail" class="col-sm-2 col-form-label">Pekerjaan</label>
-                                          <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="Doktor" readonly>
-                                          </div>
-                                        </div>
-                                        <hr>
-                                    </form>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card card-secondary">
-                              <div class="card-header">
-                                <h4 class="card-title w-100">
-                                  <a class="d-block w-100" data-toggle="collapse" href="#collapseThree">
-                                    Pencapaian Terdahulu
-                                  </a>
-                                </h4>
-                              </div>
-                              <div id="collapseThree" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    <strong><i class="fas fa-book mr-1"></i> Keputusan Peperiksaan Tingkatan 3: 7A 1B</strong>
+                                <th colspan="2">Bahasa Melayu</th>
+                                <th colspan="2">Bahasa Inggeris</th>
+                                <th colspan="2">Pendidikan Islam</th>
+                                <th colspan="2">Pendidikan Moral</th>
+                                <th colspan="2">Sejarah</th>
+                                <th colspan="2">Matematik</th>
+                                <th colspan="2">Sains</th>
+                                <th colspan="2">Matematik Tambahan</th>
+                                <th colspan="2">Prinsip Perakaunan</th>
+                                <th colspan="2">Perniagaan</th>
+                                <th colspan="2">Sains Komputer</th>
+                                <th colspan="2">Fizik</th>
+                                <th colspan="2">Kimia</th>
+                                <th colspan="2">Biologi</th>
+                              </tr>
+                              <tr>
+                                <th>M</th>
+                                <th>G</th>
 
-                                    <p class="text-muted mb-0">
-                                        Bahasa Melayu   : A
-                                    </p>
-                                    <p class="text-muted mb-0">
-                                        Bahasa Inggeris  : A
-                                    </p>
-                                    <p class="text-muted mb-0">
-                                        Matematik        : A
-                                    </p>
-                                    <p class="text-muted mb-0">
-                                        Sains   : A
-                                    </p>
-                                    <p class="text-muted mb-0">
-                                        Pendidikan Islam   : A
-                                    </p>
-                                    <p class="text-muted mb-0">
-                                        Geografi   : A
-                                    </p>
-                                    <p class="text-muted mb-0">
-                                        Bahasa Arab   : A
-                                    </p>
+                                <th>M</th>
+                                <th>G</th>
 
-                                    <hr>
+                                <th>M</th>
+                                <th>G</th>
 
-                                    <strong><i class="fas fa-book mr-1"></i> Pertandingan Sukan:</strong>
+                                <th>M</th>
+                                <th>G</th>
 
-                                    <p class="text-muted mb-0">
-                                        Bola Sepak Peringkat Negeri
-                                    </p>
-                                    
-                                    <hr>
+                                <th>M</th>
+                                <th>G</th>
 
-                                    <strong><i class="fas fa-book mr-1"></i> Pasukan Beruniform:</strong>
+                                <th>M</th>
+                                <th>G</th>
 
-                                    <p class="text-muted mb-0">
-                                        Pengakap Peringkat Sekolah
-                                    </p>
+                                <th>M</th>
+                                <th>G</th>
 
+                                <th>M</th>
+                                <th>G</th>
 
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                        <!-- Butiran -->
+                                <th>M</th>
+                                <th>G</th>
+
+                                <th>M</th>
+                                <th>G</th>
+
+                                <th>M</th>
+                                <th>G</th>
+
+                                <th>M</th>
+                                <th>G</th>
+
+                                <th>M</th>
+                                <th>G</th>
+
+                                <th>M</th>
+                                <th>G</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                        </table>                        
+                        <!-- Peperiksaan 1 -->
 
                   </div>
                   <!-- /.tab-pane -->
