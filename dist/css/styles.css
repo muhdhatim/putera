@@ -1,6 +1,7 @@
+/* ANY CUSTOM CSS HERE */
 
 /* Toggle this class to make a div fullscreen */
-panel-fullscreen{
+.panel-fullscreen{
     display: block;
     z-index: 9999;
     position: fixed;
@@ -11,4 +12,23 @@ panel-fullscreen{
     left: 0;
     bottom: 0;
     overflow: auto;
+}
+
+.akd-fixed-th{
+    /* max-width: 15px !important; */
+    text-align: center;
+    background-color: yellowgreen;
+    vertical-align: middle !important;
+}
+
+.akd-fixed-th2{
+    width: 30px !important;
+    text-align: center;
+    background-color: yellowgreen;
+    vertical-align: middle !important;
+}
+
+.v-align-middle{
+    vertical-align: middle !important;
+    text-align: center;
 }

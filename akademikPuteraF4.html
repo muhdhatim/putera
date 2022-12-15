@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Custom style -->
+  <link rel="stylesheet" href="dist/css/styles.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
@@ -224,85 +226,190 @@
                   <div class="active tab-pane" id="peperiksaan1">
 
                         <!-- Peperiksaan 1 -->
-                        <table class="table table-bordered table-sm">
-                            <thead>
-                              <tr>
-                                <th style="text-align: center;" colspan="37">MAKTAB TENTERA DIRAJA</th>
-                              </tr>
-                              <tr>
-                                <th style="text-align: center;" colspan="37">KEPUTUSAN PEPERIKSAAN PENGGAL SATU TINGKATAN 4 TAHUN 2022</th>
-                              </tr>
-                              <tr>
-                                <th rowspan="2">Bil. </th>
-                                <th rowspan="2">Nama</th>
-                                <th rowspan="2">Kelas</th>
-                                <th rowspan="2">Kompeni</th>
 
-                                <th colspan="2">Bahasa Melayu</th>
-                                <th colspan="2">Bahasa Inggeris</th>
-                                <th colspan="2">Pendidikan Islam</th>
-                                <th colspan="2">Pendidikan Moral</th>
-                                <th colspan="2">Sejarah</th>
-                                <th colspan="2">Matematik</th>
-                                <th colspan="2">Sains</th>
-                                <th colspan="2">Matematik Tambahan</th>
-                                <th colspan="2">Prinsip Perakaunan</th>
-                                <th colspan="2">Perniagaan</th>
-                                <th colspan="2">Sains Komputer</th>
-                                <th colspan="2">Fizik</th>
-                                <th colspan="2">Kimia</th>
-                                <th colspan="2">Biologi</th>
-                              </tr>
-                              <tr>
-                                <th>M</th>
-                                <th>G</th>
+                        <div class="card card-primary card-outline" id="exam-result-content">
+                          <div class="card-header">
+                            <h3 class="card-title">Exam</h3>
+                            <div class="card-tools">
+                                <!-- <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Minimize">
+                                  <i class="fas fa-minus"></i>
+                                </button> -->
+                                <button type="button" class="btn btn-tool" title="Expand" id="exam-result-exp-btn">
+                                  <i class="fas fa-expand-arrows-alt"></i>
+                                </button>
+                            </div>
+                          </div>
 
-                                <th>M</th>
-                                <th>G</th>
+                          <div class="card-body" style="overflow-x: auto;">
+                              
+                            <table class="table table-bordered table-sm">
+                                <thead>
+                                  <tr>
+                                    <th style="text-align: center;" colspan="37"><u>MAKTAB TENTERA DIRAJA</u></th>
+                                  </tr>
+                                  <tr style="background-color: yellowgreen;">
+                                    <th style="text-align: center;" colspan="37"><u>PEPERIKSAAN PENGGAL SATU TINGKATAN 4 TAHUN 2022</u></th>
+                                  </tr>
+                                  <tr style="background-color: yellowgreen;">
+                                    <th rowspan="2" class="v-align-middle">Bil. </th>
+                                    <th rowspan="2" style="min-width: 200px !important;" class="v-align-middle">Nama</th>
+                                    <th rowspan="2" class="v-align-middle" style="writing-mode: vertical-lr; transform: rotate(180deg); text-align: center;">Kelas</th>
+                                    <th rowspan="2" class="v-align-middle" style="writing-mode: vertical-lr; transform: rotate(180deg); text-align: center;">Kompeni</th>
 
-                                <th>M</th>
-                                <th>G</th>
+                                    <th colspan="2" class="akd-fixed-th2">Bahasa Melayu</th>
+                                    <th colspan="2" class="akd-fixed-th2">Bahasa Inggeris</th>
+                                    <th colspan="2" class="akd-fixed-th2">Pendidikan Islam</th>
+                                    <th colspan="2" class="akd-fixed-th2">Pendidikan Moral</th>
+                                    <th colspan="2" class="akd-fixed-th2">Sejarah</th>
+                                    <th colspan="2" class="akd-fixed-th2">Matematik</th>
+                                    <th colspan="2" class="akd-fixed-th2">Sains</th>
+                                    <th colspan="2" class="akd-fixed-th2">Matematik Tambahan</th>
+                                    <th colspan="2" class="akd-fixed-th2">Prinsip Perakaunan</th>
+                                    <th colspan="2" class="akd-fixed-th2">Perniagaan</th>
+                                    <th colspan="2" class="akd-fixed-th2">Sains Komputer</th>
+                                    <th colspan="2" class="akd-fixed-th2">Fizik</th>
+                                    <th colspan="2" class="akd-fixed-th2">Kimia</th>
+                                    <th colspan="2" class="akd-fixed-th2">Biologi</th>
 
-                                <th>M</th>
-                                <th>G</th>
+                                    <th rowspan="2" class="v-align-middle">Jumlah Markah</th>
+                                    <th rowspan="2" class="v-align-middle">Peratus</th>
+                                    <th rowspan="2" class="v-align-middle">PNG</th>
+                                    <th rowspan="2" class="v-align-middle">Kedudukan dalam kelas</th>
+                                    <th rowspan="2" class="v-align-middle">Kedudukan dalam tingkatan</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
 
-                                <th>M</th>
-                                <th>G</th>
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
 
-                                <th>M</th>
-                                <th>G</th>
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
 
-                                <th>M</th>
-                                <th>G</th>
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
 
-                                <th>M</th>
-                                <th>G</th>
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
 
-                                <th>M</th>
-                                <th>G</th>
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
 
-                                <th>M</th>
-                                <th>G</th>
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
 
-                                <th>M</th>
-                                <th>G</th>
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
 
-                                <th>M</th>
-                                <th>G</th>
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
 
-                                <th>M</th>
-                                <th>G</th>
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
 
-                                <th>M</th>
-                                <th>G</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td></td>
-                              </tr>
-                            </tbody>
-                        </table>                        
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
+
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
+
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
+
+                                    <th class="akd-fixed-th">M</th>
+                                    <th class="akd-fixed-th">G</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>AFIQ BIN MOHD RAMLEE</td>
+                                    <td>4A</td>
+                                    <td>F</td>
+                                    <td>73</td>
+                                    <td>A-</td>
+                                    <td>60</td>
+                                    <td>B</td>
+                                    <td>60</td>
+                                    <td>B</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>46</td>
+                                    <td>D</td>
+                                    <td>30</td>
+                                    <td>G</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>14</td>
+                                    <td>G</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>36</td>
+                                    <td>G</td>
+                                    <td>35</td>
+                                    <td>G</td>
+                                    <td>36</td>
+                                    <td>G</td>
+                                    <td>390</td>
+                                    <td>43.44</td>
+                                    <td>1.28</td>
+                                    <td>21</td>
+                                    <td>224</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>AMIRUL AMSYAR BIN SUHAIMI</td>
+                                    <td>4A</td>
+                                    <td>H</td>
+                                    <td>73</td>
+                                    <td>A-</td>
+                                    <td>60</td>
+                                    <td>B</td>
+                                    <td>60</td>
+                                    <td>B</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>46</td>
+                                    <td>D</td>
+                                    <td>30</td>
+                                    <td>G</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>14</td>
+                                    <td>G</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>36</td>
+                                    <td>G</td>
+                                    <td>35</td>
+                                    <td>G</td>
+                                    <td>36</td>
+                                    <td>G</td>
+                                    <td>390</td>
+                                    <td>43.44</td>
+                                    <td>1.28</td>
+                                    <td>21</td>
+                                    <td>224</td>
+                                  </tr>
+                                </tbody>
+                            </table>
+
+                          </div>
+
+                          <div class="card-footer">
+                          </div>
+
+                        </div>
+                       
                         <!-- Peperiksaan 1 -->
 
                   </div>
@@ -495,5 +602,22 @@ Matematik       : A    Sejarah            : B      Kimia    :A
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+
+<!-- Custom Script -->
+<script>
+$(document).on('click', '#exam-result-exp-btn', function(e){
+  // alert('click');
+  $('#exam-result-content').toggleClass('panel-fullscreen');
+  $("i", this).toggleClass("fa-expand-arrows-alt fa-compress-arrows-alt");
+  if($(this).attr('title')==='Expand'){
+      //alert("true");
+      $(this).attr('title','Minimize');
+  }
+  else{
+      $(this).attr('title','Expand');           
+  }
+});  
+</script>
+
 </body>
 </html>
