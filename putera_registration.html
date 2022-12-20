@@ -109,108 +109,109 @@
                                                     <div class="line"></div>
                                                 </div>
                                                 <!-- Butiran Peribadi  -->
-                                                <div class="col-6">
-                                                    <div class="form-group">
-                                                        <label for="no_ic">No. Kad Pengenalan</label>
-                                                        <input type="text" class="form-control" id="no_ic" placeholder="No Kad Pengenalan"> 
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="dob">Tarikh Lahir</label>
-                                                        <input type="date" class="form-control" id="dob" placeholder="Tarikh Lahir"> 
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="bc">No. Sijil Kelahiran</label>
-                                                        <input type="text" class="form-control" id="bc" placeholder="No. Sijil Kelahiran"> 
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="nation">Bangsa</label>
-                                                        &nbsp;
-                                                        <div class="icheck-primary d-inline">
-                                                            <input type="checkbox" id="btn-other-nation">
-                                                            <label for="btn-other-nation"><small>Lain-lain bangsa</small></label>
+                                                <form class="form-personal row">
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="no_ic">No. Kad Pengenalan</label>
+                                                            <input type="text" class="form-control" id="no_ic" name="no_ic" placeholder="No Kad Pengenalan"> 
                                                         </div>
-                                                        <input type="text" class="form-control" id="nation" placeholder="Bangsa"> 
+                                                        <div class="form-group">
+                                                            <label for="dob">Tarikh Lahir</label>
+                                                            <input type="date" class="form-control" id="dob" name="dob" placeholder="Tarikh Lahir"> 
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="bc">No. Sijil Kelahiran</label>
+                                                            <input type="text" class="form-control" id="bc" name="bc" placeholder="No. Sijil Kelahiran"> 
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="nation">Bangsa</label>
+                                                            &nbsp;
+                                                            <div class="icheck-primary d-inline">
+                                                                <input type="checkbox" id="btn-other-nation" name="btn-other-nation">
+                                                                <label for="btn-other-nation"><small>Lain-lain bangsa</small></label>
+                                                            </div>
+                                                            <input type="text" class="form-control" id="nation" name="nation" placeholder="Bangsa"> 
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="form-group">
-                                                        <label for="fullname">Nama Penuh</label>
-                                                        <input type="text" class="form-control" id="fullname" placeholder="Nama Penuh"> 
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="fullname">Nama Penuh</label>
+                                                            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Nama Penuh"> 
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="pob">Tempat Lahir</label>
+                                                            <input type="text" class="form-control" id="pob" name="pob" placeholder="Tempat Lahir"> 
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="religion">Agama</label>
+                                                            <input type="text" class="form-control" id="religion" name="religion" placeholder="Agama"> 
+                                                        </div>
+                                                        <div class="form-group" style="display: none;">
+                                                            <label for="other_nation">Lain-lain Bangsa</label>
+                                                            <input type="text" class="form-control" id="other_nation" name="other_nation" placeholder="Lain-lain Bangsa"> 
+                                                        </div>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="pob">Tempat Lahir</label>
-                                                        <input type="text" class="form-control" id="pob" placeholder="Tempat Lahir"> 
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="religion">Agama</label>
-                                                        <input type="text" class="form-control" id="religion" placeholder="Agama"> 
-                                                    </div>
-                                                    <div class="form-group" style="display: none;">
-                                                        <label for="other_nation">Lain-lain Bangsa</label>
-                                                        <input type="text" class="form-control" id="other_nation" placeholder="Lain-lain Bangsa"> 
-                                                    </div>
-                                                </div>
 
-                                                <div class="col-12 text-center mb-2">
-                                                    <p class="h4">Butiran Tambahan</p>
-                                                    <div class="line"></div>
-                                                </div>
-                                                <!-- Butiran Tambahan  -->
+                                                    <div class="col-12 text-center mb-2">
+                                                        <p class="h4">Butiran Tambahan</p>
+                                                        <div class="line"></div>
+                                                    </div>
+                                                    <!-- Butiran Tambahan  -->
 
-                                                <div class="col-6">
-                                                    <div class="form-group">
-                                                        <label for="past_school">Nama Sekolah Asal</label>
-                                                        <input type="text" class="form-control" id="past_school" placeholder="Nama Sekolah Asal"> 
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="past_school">Nama Sekolah Asal</label>
+                                                            <input type="text" class="form-control" id="past_school" name="past_school" placeholder="Nama Sekolah Asal"> 
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="form-group">
-                                                        <label for="school_type">Jenis Sekolah</label>
-                                                        <input type="text" class="form-control" id="school_type" placeholder="Jenis Sekolah"> 
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="school_type">Jenis Sekolah</label>
+                                                            <input type="text" class="form-control" id="school_type" name="school_type" placeholder="Jenis Sekolah"> 
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                
-                                                <div class="col-4">
-                                                    <div class="form-group">
-                                                        <label for="email">Emel Putera</label>
-                                                        <input type="email" class="form-control" id="email" name="email" placeholder="Emel Putera"> 
+                                                    
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label for="email">Emel Putera</label>
+                                                            <input type="email" class="form-control" id="email" name="email" placeholder="Emel Putera"> 
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="form-group">
-                                                        <label for="total_sibling">Bilangan Adik beradik</label>
-                                                        <input type="number" class="form-control" id="total_sibling" name="total_sibling" min="0" max="20" placeholder="Bilangan Adik beradik"> 
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label for="total_sibling">Bilangan Adik beradik</label>
+                                                            <input type="number" class="form-control" id="total_sibling" name="total_sibling" min="0" max="20" placeholder="Bilangan Adik beradik"> 
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="form-group">
-                                                        <label for="putera_childs">Putera Seorang Anak</label>
-                                                        <input type="text" class="form-control" id="putera_childs" name="putera_childs" placeholder="Putera Seorang Anak"> 
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label for="putera_childs">Putera Seorang Anak</label>
+                                                            <input type="text" class="form-control" id="putera_childs" name="putera_childs" placeholder="Putera Seorang Anak"> 
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <label for="address">Alamat Tempat Tinggal/Surat Menyurat</label>
-                                                        <textarea id="address" name="address" cols="10" rows="3" class="form-control"></textarea> 
-                                                    </div>     
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="form-group">
-                                                        <label for="state">Negeri</label>
-                                                        <input type="text" class="form-control" id="state" name="state" placeholder="Negeri"> 
+                                                    
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="address">Alamat Tempat Tinggal/Surat Menyurat</label>
+                                                            <textarea id="address" name="address" cols="10" rows="3" class="form-control"></textarea> 
+                                                        </div>     
                                                     </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="form-group">
-                                                        <label for="phone_no">No. Telefon Putera</label>
-                                                        <input type="text" class="form-control" id="phone_no" name="phone_no" placeholder="No. Telefon Putera"> 
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="state">Negeri</label>
+                                                            <input type="text" class="form-control" id="state" name="state" placeholder="Negeri"> 
+                                                        </div>
                                                     </div>
-                                                </div>
-
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="phone_no">No. Telefon Putera</label>
+                                                            <input type="text" class="form-control" id="phone_no" name="phone_no" placeholder="No. Telefon Putera"> 
+                                                        </div>
+                                                    </div>
+                                                </form>
                                                 <br>
                                             </div>
-                                            <button class="btn btn-primary" onclick="stepper.next()">Next</button>
+                                            <button class="btn btn-primary" onclick="stepper.next()">Next <i class="fas fa-arrow-right"></i></button>
                                         </div>
                                         <div id="form-family-member" class="content" role="tabpanel" aria-labelledby="form-family-member-trigger">
                                             
@@ -222,88 +223,94 @@
                                                 </div>
                                                 <!-- Butiran Keluarga  -->
 
-                                                <button class="btn btn-sm btn-success">Tambah Keluarga</button>
-
-                                                <div class="card card-primary card-outline w-100 mt-2">
-                                                    <div class="card-header">
-                                                        <h3 class="card-title">Family #<span id="family-no">1</span></h3>
-                                                        <div class="card-tools">
-                                                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i> </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body">
-       
-                                                        <div class="col-12">
-                                                            <div class="form-group">
-                                                                <label for="family_type">Hubungan dengan Putera</label>
-                                                                <select class="form-control" id="family_type" name="family_type">
-                                                                    <option value="">-Sila Pilih-</option>
-                                                                    <option value="BAPA KANDUNG">BAPA KANDUNG</option>
-                                                                    <option value="IBU KANDUNG">IBU KANDUNG</option>
-                                                                    <option value="BAPA (TELAH MENINGGAL DUNIA)">BAPA (TELAH MENINGGAL DUNIA)</option>
-                                                                    <option value="IBU (TELAH MENINGGAL DUNIA)">IBU (TELAH MENINGGAL DUNIA)</option>
-                                                                    <option value="ABANG KANDUNG">ABANG KANDUNG</option>
-                                                                    <option value="KAKAK KANDUNG">KAKAK KANDUNG</option>
-                                                                    <option value="DATUK">DATUK</option>
-                                                                    <option value="NENEK">NENEK</option>
-                                                                    <option value="BAPA TIRI">BAPA TIRI</option>
-                                                                    <option value="IBU TIRI">IBU TIRI</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <div class="form-group">
-                                                                <label for="family_fullname">Nama Penuh Penjaga</label>
-                                                                <input type="text" class="form-control" id="family_fullname" name="family_fullname" placeholder="Nama Penuh Penjaga"> 
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <div class="form-group">
-                                                                <label for="family_no_ic">No. Kad Pengenalan</label>
-                                                                <input type="text" class="form-control" id="family_no_ic" name="family_no_ic" placeholder="No. Kad Pengenalan"> 
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <div class="form-group">
-                                                                <label for="family_work">Pekerjaan</label>
-                                                                <input type="text" class="form-control" id="family_work" name="family_work" placeholder="Pekerjaan"> 
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <div class="form-group">
-                                                                <label for="family_salary">Pendapatan (RM)</label>
-                                                                <input type="text" class="form-control" id="family_salary" name="family_salary" placeholder="Pendapatan (RM)"> 
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <div class="form-group">
-                                                                <label for="family_email">Emel</label>
-                                                                <input type="email" class="form-control" id="family_email" name="family_email" placeholder="Emel"> 
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <div class="form-group">
-                                                                <label for="family_phone_no">No. Telefon</label>
-                                                                <input type="text" class="form-control" id="family_phone_no" name="family_phone_no" placeholder="No. Telefon"> 
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-6">
-                                                            <div class="form-group">
-                                                                <label for="family_dependent_no">Bil. Tanggungan</label>
-                                                                <input type="text" class="form-control" id="family_dependent_no" name="family_dependent_no" placeholder="Bil. Tanggungan"> 
-                                                            </div>
-                                                        </div> 
-
-                                                    </div>
+                                                <div class="col-12">
+                                                    <button class="btn btn-sm btn-success" id="btn-add-family"><i class="fas fa-plus"></i> Tambah Keluarga</button>
+                                                    <button class="btn btn-sm btn-danger remove-family-form"><i class="fas fa-times"></i> Buang Keluarga</button>
                                                 </div>
 
+                                                <form class="form-family row" id="form-family-1">
+                                                    <div class="col-12">
+                                                        <div class="card card-primary card-outline mt-2">
+                                                            <div class="card-header">
+                                                                <h3 class="card-title">Keluarga #<span id="family-no">1</span></h3>
+                                                                <div class="card-tools">
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body row">
+            
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label for="family_type">Hubungan dengan Putera</label>
+                                                                        <select class="form-control" id="family_type" name="family_type">
+                                                                            <option value="">-Sila Pilih-</option>
+                                                                            <option value="BAPA KANDUNG">BAPA KANDUNG</option>
+                                                                            <option value="IBU KANDUNG">IBU KANDUNG</option>
+                                                                            <option value="BAPA (TELAH MENINGGAL DUNIA)">BAPA (TELAH MENINGGAL DUNIA)</option>
+                                                                            <option value="IBU (TELAH MENINGGAL DUNIA)">IBU (TELAH MENINGGAL DUNIA)</option>
+                                                                            <option value="ABANG KANDUNG">ABANG KANDUNG</option>
+                                                                            <option value="KAKAK KANDUNG">KAKAK KANDUNG</option>
+                                                                            <option value="DATUK">DATUK</option>
+                                                                            <option value="NENEK">NENEK</option>
+                                                                            <option value="BAPA TIRI">BAPA TIRI</option>
+                                                                            <option value="IBU TIRI">IBU TIRI</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="family_fullname">Nama Penuh Penjaga</label>
+                                                                        <input type="text" class="form-control" id="family_fullname" name="family_fullname" placeholder="Nama Penuh Penjaga"> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="family_no_ic">No. Kad Pengenalan</label>
+                                                                        <input type="text" class="form-control" id="family_no_ic" name="family_no_ic" placeholder="No. Kad Pengenalan"> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="family_work">Pekerjaan</label>
+                                                                        <input type="text" class="form-control" id="family_work" name="family_work" placeholder="Pekerjaan"> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="family_salary">Pendapatan (RM)</label>
+                                                                        <input type="text" class="form-control" id="family_salary" name="family_salary" placeholder="Pendapatan (RM)"> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="family_email">Emel</label>
+                                                                        <input type="email" class="form-control" id="family_email" name="family_email" placeholder="Emel"> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="family_phone_no">No. Telefon</label>
+                                                                        <input type="text" class="form-control" id="family_phone_no" name="family_phone_no" placeholder="No. Telefon"> 
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-6" style="display: none;">
+                                                                    <div class="form-group">
+                                                                        <label for="family_dependent_no">Bil. Tanggungan</label>
+                                                                        <input type="text" class="form-control" id="family_dependent_no" name="family_dependent_no" placeholder="Bil. Tanggungan"> 
+                                                                    </div>
+                                                                </div> 
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
 
                                             <br>
 
-                                            <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
-                                            <button class="btn btn-primary" onclick="stepper.next()">Next</button>
+                                            <button class="btn btn-primary" onclick="stepper.previous()"><i class="fas fa-arrow-left"></i> Previous</button>
+                                            <button class="btn btn-primary" onclick="stepper.next()">Next <i class="fas fa-arrow-right"></i></button>
                                         </div>
                                         <div id="form-submit" class="content" role="tabpanel" aria-labelledby="form-submit-trigger">
                                             <div class="form-group">
@@ -316,7 +323,7 @@
                                                     <div class="input-group-append"> <span class="input-group-text">Upload</span> </div>
                                                 </div>
                                             </div>
-                                            <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
+                                            <button class="btn btn-primary" onclick="stepper.previous()"><i class="fas fa-arrow-left"></i> Previous</button>
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
@@ -330,8 +337,13 @@
 			</div>
 		</div>
 	</div>
-	<footer class="main-footer">
-		<div class="float-right d-none d-sm-inline"> Anything you want </div> <strong>Copyright © 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved. </footer>
+    <footer class="main-footer">
+        <strong>Copyright &copy; 2022-2023 <a href="#">IMC</a>.</strong>
+        All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 1.0
+        </div>
+    </footer>
 </div>
 
 
@@ -376,12 +388,12 @@
 <!-- Custom Script -->
 <script>
 
-  // BS-Stepper Init
-  document.addEventListener('DOMContentLoaded', function () {
-    window.stepper = new Stepper(document.querySelector('.bs-stepper'))
-  })
+    // BS-Stepper Init
+    document.addEventListener('DOMContentLoaded', function () {
+        window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+    })
   
-  $(document).ready(function(){
+    $(document).ready(function(){
         $(document).on("click", '#btn-other-nation', function() {
             if ($(this).is(':checked')) {
                 $('#nation').val('');
@@ -393,7 +405,56 @@
                 $('#nation').removeAttr('disabled');
             }
         });
+
+        $(document).on('change', '#family_type', function(){
+            if($(this).val().toUpperCase() == "BAPA KANDUNG"){
+                $(this).parents('form.form-family').find('input#family_dependent_no').parents('div.col-6').show();
+            }
+            else{
+                $(this).parents('form.form-family').find('input#family_dependent_no').parents('div.col-6').hide();
+            }
+        });
     });
+
+
+    var regex = /^(.+?)(\d+)$/i;
+    var formFamilyIndex = $(".form-family").length;
+
+    function addFamilyMemberForm(){
+        if($(".form-family").length <= formFamilyIndex){formFamilyIndex = $(".form-family").length + 1;}
+     
+        $('.form-family:last').clone()
+            .insertAfter("#form-family-member .form-family:last")
+            .attr("id", "form-family-" +  formFamilyIndex)
+            .find("*")
+            .each(function() {
+                var id = this.id || "";
+                var match = id.match(regex) || [];
+                if (match.length == 3) {
+                    this.id = match[1] + (formFamilyIndex);
+                }
+                
+                if($(this).hasClass('card-tools') && !$(this).children('button').hasClass('remove')){
+                    // $(this).append('<button type="button" class="btn btn-tool remove-family-form"><i class="fas fa-times"></i></button>')
+                }
+
+                $(this).children('#family-no').text(formFamilyIndex)
+                
+            }).focus()
+            // .on('click', '#btn-add-family', addFamilyMemberForm)
+            // .on('click', 'button.remove', remove);
+        formFamilyIndex++;
+    }
+    function remove(){
+        // $(this).parents(".form-family").remove();
+        if($(".form-family").length <= 1){ return;}
+        $(".form-family:last").remove();
+    }
+    $("#btn-add-family").on("click", addFamilyMemberForm);
+
+    $(document).on("click", "button.remove-family-form", remove);
+    
+    
 
 </script>
 
