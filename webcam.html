@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Upload | Camera</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+
+    <link rel="stylesheet" href="plugins/cropper/css/cropper.css">
+
+    <style>
+        /*-------------------------------------
+        Template Name: A2ZWebhelp 
+        Template URI: https://www.a2zwebhelp.com
+        Version: 2.0
+        ---------------------------------------
+
+        /*---------------------------------------
+            Default CSS
+        ---------------------------------------*/
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600');
+        * {
+            margin:0;
+            padding:0
+        }
+        .a2z-wrapper a {
+            text-decoration:none
+        }
+        .a2z-wrapper a:hover,
+        .a2z-wrapper a:focus {
+            text-decoration:none
+        }
+        .a2z-wrapper ul{
+            margin-bottom: 0;
+        }
+        .a2z-wrapper li {
+            list-style:none
+        }
+        .a2z-wrapper p{
+            margin: 0;
+        }
+
+        .a2z-wrapper{
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 400;
+            color: #353940;
+            background: url(images/bg.png) no-repeat top center;
+            text-transform: capitalize;
+            overflow-x: hidden;
+        }
+
+
+        .a2z-area{
+            padding: 60px 0;
+        }
+
+        .a2z-area{
+            position: relative;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .error {color: #FF0000;}
+
+        .avatararea{
+            border:1px solid #4BA4F2;
+            background:#FFF;
+            border-radius: 15px;
+            min-height: 250px;
+        }
+        .avatararea h3{
+            margin-top: 15px;
+            text-align: center;
+            font-size: 25px;
+        }
+        .avatararea ul{
+            margin: 20px 0 0 0;
+            padding: 0;
+        }
+
+        .avatararea ul li{
+            margin: 0 0 10px 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        .avatarimage{
+            display: inline-block;
+            border: 1px solid #f15e1b;
+            margin: 20px 0 0 30px;
+            position:relative;
+        }
+
+        .avatarimage p{
+            background: rgba(209, 62, 0, 0.7);
+            padding: 4px 5px;
+            text-align: center;
+            color: #FFF;
+            font-size: 15px;
+            position:absolute;
+            width: 100%;
+            bottom:0px;
+        }
+        .progress{
+            display: none;
+        }
+        .alert{
+            display: none;
+        }
+        .buttonarea{
+            display: inline-block;
+            margin: 10px 0 30px 30px;
+        }
+        .upload{
+            background-color: #2a649c;
+            border: none;
+            color: white;
+            padding: 6px 16px;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 0;
+        }
+        .upload:hover{
+            background-color: #1281ed;
+        }
+
+        .camera{
+            background-color: #00a58d;
+            border: none;
+            color: white;
+            padding: 6px 16px;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 0 0 0 8px;
+        }
+
+        .camera:hover{
+            background-color: #0b5c50;
+        }
+
+        .btnsmall{
+            background-color: #08c2d8;
+            border: none;
+            color: white;
+            padding: 6px 16px;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 0 0 0 5px;
+        }
+
+        .btnsmall:hover{
+            background-color: #068e9e;
+        }
+        .btngroup{
+            margin-top: 15px;
+        }
+
+        .modal-body {
+            width:680px; 
+            height:480px; 
+        }
+        .modal-dialog{
+            position: relative;
+            display: table; 
+            overflow-y: auto;    
+            overflow-x: auto;
+            width: auto;
+            min-width: 300px;   
+        }
+        #cropimage{
+            overflow: hidden;
+            width:640px;
+            height: 480px;
+        }
+        @media only screen and (max-width:767px){
+            
+            .imagearea {
+            margin: 0 auto;
+            float: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            }
+            .buttonarea {margin: 10px 0 30px 0px;}
+            .avatarimage {
+            display: block;
+            margin: 0px auto;
+            max-width: 227px;
+            }
+            .avatararea ul {
+            margin: 20px auto;
+            padding: 0;
+            max-width: 280px;
+            }
+            .modal-dialog{
+            display: block; 
+            }
+            .modal-body { width: 100%; height: 480px;}
+            #cropimage{
+                overflow: hidden;
+                width:100%; 
+            }
+            #my_camera{width:100% !important;} 
+            #my_camera video {width:100% !important; height: auto !important; } 
+            #webcam_movie_obj{width:100% !important;}
+            #webcam_movie_embed {width:100% !important;}
+        }
+        @media only screen and (max-width:679px){
+            .modal-body {
+                width:100%; 		
+                height:100%; 
+            }
+            
+            #cropimage{
+                overflow: hidden;
+                height: 315px;
+                width:100%; 
+            }
+        }
+        @media only screen and (max-width:479px){
+            .modal-body {
+                width:100%; 		
+                height:100%; 
+            }
+            
+            #cropimage{
+                overflow: hidden;
+                height: 240px;
+                width:100%; 
+            }
+        }
+        @media only screen and (max-width:420px){
+        .btnsmall { padding: 2px 7px; margin:0;}
+        .upload1 {background-color: #2a649c; padding: 3px 10px; float:none !important; border: none; color: white;font-size: 15px; margin: 0;}
+        .camera1 {
+            background-color: #00a58d;
+            border: none;
+            color: white;
+            padding:  3px 10px;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 0 0 0 5px;
+            }
+        }
+        /*---------------------------------------
+            Responsive css
+        ---------------------------------------*/
+        .uploadfull{ display:block; width: 227px;}
+        .camerahide{ display:none;}
+    </style>
+
+</head>
+<body class="a2z-wrapper">
+
+
+    <!--Start a2z-area-->
+    <section class="a2z-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="avatararea">
+                        <h3>Upload and Crop your Avatar</h3>
+                        <div class="row">
+                        <div class="imagearea col-lg-5 col-md-5 col-sm-12">
+                            <div class="avatarimage" id="drop-area"> 
+                            <img src="images/avatar.jpg" alt="avatar"  id="avatarimage" />
+                            <p>Drop your avatar here</p>
+                            </div>
+                            <div class="buttonarea"> 
+                            <!-- <button class="btn upload" data-toggle="modal" data-target="#myModal" onclick="cropImage()"><i class="fa fa-upload"></i> &nbsp; Upload</button> -->
+                            
+                            <label class="btn upload"> <i class="fa fa-upload"></i> &nbsp; Upload<input type="file" class="sr-only" id="input" name="image" accept="image/*"></label>
+                            <!-- <button class="btn camera" data-backdrop="static" data-toggle="modal" data-target="#cameraModal"><i class="fa fa-camera"></i> &nbsp;  Camera</button> -->
+                            </div>
+                            <div class="alert" role="alert"></div>
+                        </div>
+                        <div class="imagearea col-lg-6 col-md-6 col-sm-12 text-left">
+                            <ul>
+                                <li>- Responsive Avatar change plugin</li>
+                                <li>- Drag & drop upload </li>
+                                <li>- Take picture with the webcam </li>
+                                <li>- File upload progress </li>
+                                <li>- Crop, rotate and upload images</li>
+                                <li>- Change image without page refresh</li>
+                                <li>- Easy customization</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            
+    <!-- The Make Selection Modal -->
+    <div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <h4 class="modal-title">Make a selection</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div id="cropimage">
+            <img id="imageprev" src="images/bg.png"/>
+            </div>
+            
+            <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+            </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            <div class="btngroup">
+            <button type="button" class="btn upload1 float-left" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btnsmall" id="rotateL" title="Rotate Left"><i class="fa fa-undo"></i></button>
+            <button type="button" class="btn btnsmall" id="rotateR" title="Rotate Right"><i class="fa fa-repeat"></i></button>
+            <button type="button" class="btn btnsmall" id="scaleX" title="Flip Horizontal"><i class="fa fa-arrows-h"></i></button>
+            <button type="button" class="btn btnsmall" id="scaleY" title="Flip Vertical"><i class="fa fa-arrows-v"></i></button>  
+            <button type="button" class="btn btnsmall" id="reset" title="Reset"><i class="fa fa-refresh"></i></button> 
+            <button type="button" class="btn camera1 float-right" id="saveAvatar">Save</button>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- The Camera Modal -->
+    <div class="modal" id="cameraModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Take a picture</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                    <div id="my_camera"></div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary upload" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary camera" onclick="take_snapshot()">Take a picture</button>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.js"></script>
+
+    <script src="plugins/dropzone/dropzone.js"></script>
+    <!-- Script -->
+    <script src="plugins/webcamjs/webcam.min.js"></script>
+    <script src="plugins/cropper/js/cropper.js"></script>
+
+    <script language="JavaScript">
+		
+		// Configure a few settings and attach camera
+		function configure(){
+			Webcam.set({
+				width: 640,
+				height: 480,
+				image_format: 'jpeg',
+				jpeg_quality: 100
+			});
+			Webcam.attach('#my_camera');
+		}
+		// A button for taking snaps
+		
+		function take_snapshot() {
+			// take snapshot and get image data
+			Webcam.snap( function(data_uri) {
+				// display results in page
+				$("#cameraModal").modal('hide');
+				$("#myModal").modal({backdrop: "static"});
+				$("#cropimage").html('<img id="imageprev" src="'+data_uri+'"/>');
+				cropImage();
+				//document.getElementById('cropimage').innerHTML = ;
+			} );
+
+			Webcam.reset();
+		}
+
+		function saveSnap(){
+			// Get base64 value from <img id='imageprev'> source
+			var base64image =  document.getElementById("imageprev").src;
+
+			 Webcam.upload( base64image, 'upload.php', function(code, text) {
+				 console.log('Save successfully');
+				 //console.log(text);
+            });
+
+		}
+	
+$('#cameraModal').on('show.bs.modal', function () {
+  configure();
+})
+
+$('#cameraModal').on('hide.bs.modal', function () {
+  Webcam.reset();
+  $("#cropimage").html("");
+})
+
+$('#myModal').on('hide.bs.modal', function () {
+ $("#cropimage").html('<img id="imageprev" src="images/bg.png"/>');
+})
+
+
+/* UPLOAD Image */	
+var input = document.getElementById('input');
+var $alert = $('.alert');
+
+
+/* DRAG and DROP File */
+$("#drop-area").on('dragenter', function (e){
+	e.preventDefault();
+});
+
+$("#drop-area").on('dragover', function (e){
+	e.preventDefault();
+});
+
+$("#drop-area").on('drop', function (e){
+	var image = document.querySelector('#imageprev');
+	var files = e.originalEvent.dataTransfer.files;
+	
+	var done = function (url) {
+          input.value = '';
+          image.src = url;
+          $alert.hide();
+		  $("#myModal").modal({backdrop: "static"});
+		  cropImage();
+        };
+		
+	var reader;
+        var file;
+        var url;
+
+        if (files && files.length > 0) {
+          file = files[0];
+
+          if (URL) {
+            done(URL.createObjectURL(file));
+          } else if (FileReader) {
+            reader = new FileReader();
+            reader.onload = function (e) {
+              done(reader.result);
+            };
+            reader.readAsDataURL(file);
+          }
+        }	
+	
+	e.preventDefault();	
+	
+});
+
+/* INPUT UPLOAD FILE */
+input.addEventListener('change', function (e) {
+		var image = document.querySelector('#imageprev');
+        var files = e.target.files;
+        var done = function (url) {
+          input.value = '';
+          image.src = url;
+          $alert.hide();
+		  $("#myModal").modal({backdrop: "static"});
+		  cropImage();
+		  
+        };
+        var reader;
+        var file;
+        var url;
+
+        if (files && files.length > 0) {
+          file = files[0];
+
+          if (URL) {
+            done(URL.createObjectURL(file));
+          } else if (FileReader) {
+            reader = new FileReader();
+            reader.onload = function (e) {
+              done(reader.result);
+            };
+            reader.readAsDataURL(file);
+          }
+        }
+      });
+/* CROP IMAGE AFTER UPLOAD */	
+function cropImage() {
+      var image = document.querySelector('#imageprev');
+      var minAspectRatio = 0.5;
+      var maxAspectRatio = 1.5;
+	  
+      var cropper = new Cropper(image, {
+		aspectRatio: 11 /12,  
+		minCropBoxWidth: 220,
+		minCropBoxHeight: 240,
+
+        ready: function () {
+          var cropper = this.cropper;
+          var containerData = cropper.getContainerData();
+          var cropBoxData = cropper.getCropBoxData();
+          var aspectRatio = cropBoxData.width / cropBoxData.height;
+          //var aspectRatio = 4 / 3;
+          var newCropBoxWidth;
+		  cropper.setDragMode("move");
+          if (aspectRatio < minAspectRatio || aspectRatio > maxAspectRatio) {
+            newCropBoxWidth = cropBoxData.height * ((minAspectRatio + maxAspectRatio) / 2);
+
+            cropper.setCropBoxData({
+              left: (containerData.width - newCropBoxWidth) / 2,
+              width: newCropBoxWidth
+            });
+          }
+        },
+
+        cropmove: function () {
+          var cropper = this.cropper;
+          var cropBoxData = cropper.getCropBoxData();
+          var aspectRatio = cropBoxData.width / cropBoxData.height;
+
+          if (aspectRatio < minAspectRatio) {
+            cropper.setCropBoxData({
+              width: cropBoxData.height * minAspectRatio
+            });
+          } else if (aspectRatio > maxAspectRatio) {
+            cropper.setCropBoxData({
+              width: cropBoxData.height * maxAspectRatio
+            });
+          }
+        },
+		
+		
+      });
+	  
+	  $("#scaleY").click(function(){ 
+		var Yscale = cropper.imageData.scaleY;
+		if(Yscale==1){ cropper.scaleY(-1); } else {cropper.scaleY(1);};
+	  });
+	  
+	  $("#scaleX").click( function(){ 
+		var Xscale = cropper.imageData.scaleX;
+		if(Xscale==1){ cropper.scaleX(-1); } else {cropper.scaleX(1);};
+	  });
+	  
+	  $("#rotateR").click(function(){ cropper.rotate(45); });
+	  $("#rotateL").click(function(){ cropper.rotate(-45); });
+	  $("#reset").click(function(){ cropper.reset(); });
+	  
+	  $("#saveAvatar").click(function(){
+		  var $progress = $('.progress');
+		  var $progressBar = $('.progress-bar');
+		  var avatar = document.getElementById('avatarimage');
+		  var $alert = $('.alert');
+          canvas = cropper.getCroppedCanvas({
+            width: 220,
+            height: 240,
+          });
+          
+          $progress.show();
+          $alert.removeClass('alert-success alert-warning');
+          canvas.toBlob(function (blob) {
+            var formData = new FormData();
+
+            formData.append('avatar', blob, 'avatar.jpg');
+            $.ajax('upload.php', {
+              method: 'POST',
+              data: formData,
+              processData: false,
+              contentType: false,
+
+              xhr: function () {
+                var xhr = new XMLHttpRequest();
+
+                xhr.upload.onprogress = function (e) {
+                  var percent = '0';
+                  var percentage = '0%';
+
+                  if (e.lengthComputable) {
+                    percent = Math.round((e.loaded / e.total) * 100);
+                    percentage = percent + '%';
+                    $progressBar.width(percentage).attr('aria-valuenow', percent).text(percentage);
+                  }
+                };
+
+                return xhr;
+              },
+
+              success: function () {
+                //$alert.show().addClass('alert-success').text('Upload success');
+              },
+
+              error: function () {
+                avatar.src = initialAvatarURL;
+                $alert.show().addClass('alert-warning').text('Upload error');
+              },
+
+              complete: function () {
+				$("#myModal").modal('hide');  
+                $progress.hide();
+				initialAvatarURL = avatar.src;
+				avatar.src = canvas.toDataURL();
+              },
+            });
+          });
+	  
+	  });
+};	
+
+</script>
+
+
+</body>
+</html>
