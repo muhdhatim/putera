@@ -81,23 +81,23 @@
 			<div class="container">
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-12">
                         <div class="card card-default">
                             <div class="card-header">
                                 <h3 class="card-title">Sila isi semua butiran-butiran dengan tepat</h3> </div>
-                            <div class="card-body p-0">
-                                <div class="bs-stepper linear">
-                                    <div class="bs-stepper-header" role="tablist">
+                            <div class="card-body overflow-auto">
+                                <div class="bs-stepper" id="stepper1">
+                                    <div class="bs-stepper-header d-inline d-md-flex" role="tablist">
                                         <div class="step active" data-target="#form-personal-detail">
-                                            <button type="button" class="step-trigger" role="tab" aria-controls="form-personal-detail" id="form-personal-detail-trigger" aria-selected="true"> <span class="bs-stepper-circle">1</span> <span class="bs-stepper-label">Butiran Peribadi</span> </button>
+                                            <button type="button" class="step-trigger" role="tab" aria-controls="form-personal-detail" id="form-personal-detail-trigger" > <span class="bs-stepper-circle">1</span> <span class="bs-stepper-label">Butiran Peribadi</span> </button>
                                         </div>
                                         <div class="line"></div>
                                         <div class="step" data-target="#form-family-member">
-                                            <button type="button" class="step-trigger" role="tab" aria-controls="form-family-member" id="form-family-member-trigger" aria-selected="true"> <span class="bs-stepper-circle">2</span> <span class="bs-stepper-label">Butiran Keluarga</span> </button>
+                                            <button type="button" class="step-trigger" role="tab" aria-controls="form-family-member" id="form-family-member-trigger" > <span class="bs-stepper-circle">2</span> <span class="bs-stepper-label">Butiran Keluarga</span> </button>
                                         </div>
                                         <div class="line"></div>
                                         <div class="step" data-target="#form-submit">
-                                            <button type="button" class="step-trigger" role="tab" aria-controls="form-submit" id="form-submit-trigger" aria-selected="false" disabled="disabled"> <span class="bs-stepper-circle">3</span> <span class="bs-stepper-label">Hantar</span> </button>
+                                            <button type="button" class="step-trigger" role="tab" aria-controls="form-submit" id="form-submit-trigger" > <span class="bs-stepper-circle">3</span> <span class="bs-stepper-label">Hantar</span> </button>
                                         </div>
                                     </div>
                                     <div class="bs-stepper-content">
@@ -110,7 +110,7 @@
                                                 </div>
                                                 <!-- Butiran Peribadi  -->
                                                 <form class="form-personal row">
-                                                    <div class="col-6">
+                                                    <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="no_ic">No. Kad Pengenalan</label>
                                                             <input type="text" class="form-control" id="no_ic" name="no_ic" placeholder="No Kad Pengenalan"> 
@@ -133,7 +133,7 @@
                                                             <input type="text" class="form-control" id="nation" name="nation" placeholder="Bangsa"> 
                                                         </div>
                                                     </div>
-                                                    <div class="col-6">
+                                                    <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="fullname">Nama Penuh</label>
                                                             <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Nama Penuh"> 
@@ -158,32 +158,32 @@
                                                     </div>
                                                     <!-- Butiran Tambahan  -->
 
-                                                    <div class="col-6">
+                                                    <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="past_school">Nama Sekolah Asal</label>
                                                             <input type="text" class="form-control" id="past_school" name="past_school" placeholder="Nama Sekolah Asal"> 
                                                         </div>
                                                     </div>
-                                                    <div class="col-6">
+                                                    <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="school_type">Jenis Sekolah</label>
                                                             <input type="text" class="form-control" id="school_type" name="school_type" placeholder="Jenis Sekolah"> 
                                                         </div>
                                                     </div>
                                                     
-                                                    <div class="col-4">
+                                                    <div class="col-12 col-md-4">
                                                         <div class="form-group">
                                                             <label for="email">Emel Putera</label>
                                                             <input type="email" class="form-control" id="email" name="email" placeholder="Emel Putera"> 
                                                         </div>
                                                     </div>
-                                                    <div class="col-4">
+                                                    <div class="col-12 col-md-4">
                                                         <div class="form-group">
                                                             <label for="total_sibling">Bilangan Adik beradik</label>
                                                             <input type="number" class="form-control" id="total_sibling" name="total_sibling" min="0" max="20" placeholder="Bilangan Adik beradik"> 
                                                         </div>
                                                     </div>
-                                                    <div class="col-4">
+                                                    <div class="col-12 col-md-4">
                                                         <div class="form-group">
                                                             <label for="putera_childs">Putera Seorang Anak</label>
                                                             <input type="text" class="form-control" id="putera_childs" name="putera_childs" placeholder="Putera Seorang Anak"> 
@@ -196,13 +196,13 @@
                                                             <textarea id="address" name="address" cols="10" rows="3" class="form-control"></textarea> 
                                                         </div>     
                                                     </div>
-                                                    <div class="col-6">
+                                                    <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="state">Negeri</label>
                                                             <input type="text" class="form-control" id="state" name="state" placeholder="Negeri"> 
                                                         </div>
                                                     </div>
-                                                    <div class="col-6">
+                                                    <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="phone_no">No. Telefon Putera</label>
                                                             <input type="text" class="form-control" id="phone_no" name="phone_no" placeholder="No. Telefon Putera"> 
@@ -211,7 +211,7 @@
                                                 </form>
                                                 <br>
                                             </div>
-                                            <button class="btn btn-primary" onclick="stepper.next()">Next <i class="fas fa-arrow-right"></i></button>
+                                            <button class="btn btn-primary" onclick="stepper1.next()">Next <i class="fas fa-arrow-right"></i></button>
                                         </div>
                                         <div id="form-family-member" class="content" role="tabpanel" aria-labelledby="form-family-member-trigger">
                                             
@@ -225,12 +225,12 @@
 
                                                 <div class="col-12">
                                                     <button class="btn btn-sm btn-success" id="btn-add-family"><i class="fas fa-plus"></i> Tambah Keluarga</button>
-                                                    <button class="btn btn-sm btn-danger remove-family-form"><i class="fas fa-times"></i> Buang Keluarga</button>
+                                                    <button class="btn btn-sm btn-danger remove-family-form disabled"><i class="fas fa-times"></i> Buang Keluarga</button>
                                                 </div>
 
                                                 <form class="form-family row" id="form-family-1">
                                                     <div class="col-12">
-                                                        <div class="card card-primary card-outline mt-2">
+                                                        <div class="card card-primary card-outline mt-2 shadow">
                                                             <div class="card-header">
                                                                 <h3 class="card-title">Keluarga #<span id="family-no">1</span></h3>
                                                                 <div class="card-tools">
@@ -309,8 +309,8 @@
 
                                             <br>
 
-                                            <button class="btn btn-primary" onclick="stepper.previous()"><i class="fas fa-arrow-left"></i> Previous</button>
-                                            <button class="btn btn-primary" onclick="stepper.next()">Next <i class="fas fa-arrow-right"></i></button>
+                                            <button class="btn btn-primary" onclick="stepper1.previous()"><i class="fas fa-arrow-left"></i> Previous</button>
+                                            <button class="btn btn-primary" onclick="stepper1.next()">Next <i class="fas fa-arrow-right"></i></button>
                                         </div>
                                         <div id="form-submit" class="content" role="tabpanel" aria-labelledby="form-submit-trigger">
                                             <div class="form-group">
@@ -323,7 +323,7 @@
                                                     <div class="input-group-append"> <span class="input-group-text">Upload</span> </div>
                                                 </div>
                                             </div>
-                                            <button class="btn btn-primary" onclick="stepper.previous()"><i class="fas fa-arrow-left"></i> Previous</button>
+                                            <button class="btn btn-primary" onclick="stepper1.previous()"><i class="fas fa-arrow-left"></i> Previous</button>
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
@@ -360,13 +360,6 @@
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
 <script src="plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
 <script src="plugins/moment/moment.min.js"></script>
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
@@ -380,8 +373,7 @@
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
+
     <!-- BS Stepper -->
     <script src="plugins/bs-stepper/js/bs-stepper.min.js"></script>
 
@@ -389,8 +381,12 @@
 <script>
 
     // BS-Stepper Init
+    var stepper1;
     document.addEventListener('DOMContentLoaded', function () {
-        window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+        // window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+        stepper1 = new Stepper(document.querySelector('#stepper1'), {
+            linear: false
+        })
     })
   
     $(document).ready(function(){
@@ -421,6 +417,7 @@
     var formFamilyIndex = $(".form-family").length;
 
     function addFamilyMemberForm(){
+        $('button.remove-family-form').removeClass('disabled');
         if($(".form-family").length <= formFamilyIndex){formFamilyIndex = $(".form-family").length + 1;}
      
         $('.form-family:last').clone()
@@ -432,6 +429,10 @@
                 var match = id.match(regex) || [];
                 if (match.length == 3) {
                     this.id = match[1] + (formFamilyIndex);
+                }
+
+                if($(this).is('input')){//clear all input value when clone
+                    $(this).val('');
                 }
                 
                 if($(this).hasClass('card-tools') && !$(this).children('button').hasClass('remove')){
@@ -446,9 +447,11 @@
         formFamilyIndex++;
     }
     function remove(){
-        // $(this).parents(".form-family").remove();
-        if($(".form-family").length <= 1){ return;}
+        // $(this).parents(".form-family").remove();]
+        if($(".form-family").length <= 1){  return;}
         $(".form-family:last").remove();
+        //Check last child if got one at least
+        if($(".form-family").length == 1){  $('button.remove-family-form').addClass('disabled');}
     }
     $("#btn-add-family").on("click", addFamilyMemberForm);
 
