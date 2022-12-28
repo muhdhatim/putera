@@ -16,8 +16,6 @@
   <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- Custom style -->
@@ -257,44 +255,44 @@
                                                                         </select>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-6">
+                                                                <div class="col-12 col-md-6">
                                                                     <div class="form-group">
                                                                         <label for="family_fullname">Nama Penuh Penjaga</label>
                                                                         <input type="text" class="form-control" id="family_fullname" name="family_fullname" placeholder="Nama Penuh Penjaga"> 
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-6">
+                                                                <div class="col-12 col-md-6">
                                                                     <div class="form-group">
                                                                         <label for="family_no_ic">No. Kad Pengenalan</label>
                                                                         <input type="text" class="form-control" id="family_no_ic" name="family_no_ic" placeholder="No. Kad Pengenalan"> 
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-6">
+                                                                <div class="col-12 col-md-6">
                                                                     <div class="form-group">
                                                                         <label for="family_work">Pekerjaan</label>
                                                                         <input type="text" class="form-control" id="family_work" name="family_work" placeholder="Pekerjaan"> 
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-6">
+                                                                <div class="col-12 col-md-6">
                                                                     <div class="form-group">
                                                                         <label for="family_salary">Pendapatan (RM)</label>
                                                                         <input type="text" class="form-control" id="family_salary" name="family_salary" placeholder="Pendapatan (RM)"> 
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-6">
+                                                                <div class="col-12 col-md-6">
                                                                     <div class="form-group">
                                                                         <label for="family_email">Emel</label>
                                                                         <input type="email" class="form-control" id="family_email" name="family_email" placeholder="Emel"> 
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-6">
+                                                                <div class="col-12 col-md-6">
                                                                     <div class="form-group">
                                                                         <label for="family_phone_no">No. Telefon</label>
                                                                         <input type="text" class="form-control" id="family_phone_no" name="family_phone_no" placeholder="No. Telefon"> 
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="col-6" style="display: none;">
+                                                                <div class="col-12 col-md-6" style="display: none;">
                                                                     <div class="form-group">
                                                                         <label for="family_dependent_no">Bil. Tanggungan</label>
                                                                         <input type="text" class="form-control" id="family_dependent_no" name="family_dependent_no" placeholder="Bil. Tanggungan"> 
@@ -404,10 +402,10 @@
 
         $(document).on('change', '#family_type', function(){
             if($(this).val().toUpperCase() == "BAPA KANDUNG"){
-                $(this).parents('form.form-family').find('input#family_dependent_no').parents('div.col-6').show();
+                $(this).parents('form.form-family').find('input#family_dependent_no').parents('div.col-md-6').show();
             }
             else{
-                $(this).parents('form.form-family').find('input#family_dependent_no').parents('div.col-6').hide();
+                $(this).parents('form.form-family').find('input#family_dependent_no').parents('div.col-md-6').hide();
             }
         });
     });
@@ -457,6 +455,20 @@
 
     $(document).on("click", "button.remove-family-form", remove);
     
+// var arr = [];
+
+// $('form.form-family').each(function(i, obj) {
+//     // console.log(obj);
+//     var result = {};
+
+//     var serArr = $.each($(obj).serializeArray(), function() {
+//         result[this.name] = this.value;
+//     });
+//     console.log(result)
+//     arr.push(serArr);
+// });
+
+// console.log(arr)
     
 
 </script>
