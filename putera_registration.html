@@ -129,6 +129,7 @@
                                                                 <label for="btn-other-nation"><small>Lain-lain bangsa</small></label>
                                                             </div>
                                                             <input type="text" class="form-control" id="nation" name="nation" placeholder="Bangsa"> 
+                                                            <input type="text" class="form-control" style="display: none;" id="other_nation" name="other_nation" placeholder="Lain-lain Bangsa">
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
@@ -144,10 +145,10 @@
                                                             <label for="religion">Agama</label>
                                                             <input type="text" class="form-control" id="religion" name="religion" placeholder="Agama"> 
                                                         </div>
-                                                        <div class="form-group" style="display: none;">
+                                                        <!-- <div class="form-group" style="display: none;">
                                                             <label for="other_nation">Lain-lain Bangsa</label>
                                                             <input type="text" class="form-control" id="other_nation" name="other_nation" placeholder="Lain-lain Bangsa"> 
-                                                        </div>
+                                                        </div> -->
                                                     </div>
 
                                                     <div class="col-12 text-center mb-2">
@@ -407,12 +408,16 @@
         $(document).on("click", '#btn-other-nation', function() {
             if ($(this).is(':checked')) {
                 $('#nation').val('');
-                $('#other_nation').parents('div.form-group').show();
-                $('#nation').attr('disabled', 'disabled');
+                // $('#other_nation').parents('div.form-group').show();
+                // $('#nation').attr('disabled', 'disabled');
+                $('#nation').hide();
+                $('#other_nation').show();
             } else {
                 $('#other_nation').val('');
-                $('#other_nation').parents('div.form-group').hide();
-                $('#nation').removeAttr('disabled');
+                // $('#other_nation').parents('div.form-group').hide();
+                // $('#nation').removeAttr('disabled');
+                $('#nation').show();
+                $('#other_nation').hide();
             }
         });
 
